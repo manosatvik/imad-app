@@ -10,14 +10,22 @@ app.get('/', function (req, res) {
 });
 
 
-var articleOne = {
+var articles = {
+ 'article-one' : {
     title:"Article-one|manosatvik",
     heading:"Artilce-one",
     date:"20th feb, 2018",
     content:`<p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>
         <p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>
-        <p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>`
-    
+        <p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>`},
+ articleTwo : {title:"Article-two|manosatvik",
+    heading:"Artilce-two",
+    date:"25th feb, 2018",
+    content:`<p>This is article number two</p>`},
+ articleThree : {title:"Article-three|manosatvik",
+    heading:"Artilce-three",
+    date:"29th feb, 2018",
+    content:`<p>This is article three two</p>`}
 };
 
 function create_template(data){
@@ -52,19 +60,11 @@ return template;
 
 
 
-app.get('/article-one',function(req,res){
-   res.send(create_template(articleOne));
+app.get('/:articleName',function(req,res){
+   res.send(create_template(articles[articleName]));
 });
 
-app.get('/article-two',function(req,res){
 
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
-});
-
-app.get('/article-three',function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'article-three.html')); 
-    
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
