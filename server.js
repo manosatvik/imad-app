@@ -79,7 +79,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/counter', function (req, res) {
+var counter = 0;
+app.get('/counter', function (req, res) {
   counter = counter + 1;
   res.send(counter.toString());
 });
