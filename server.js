@@ -53,7 +53,7 @@ return template;
 
 
 app.get('/article-one',function(req,res){
-   res.create(create_template(articleOne));
+   res.send(create_template(articleOne));
 });
 
 app.get('/article-two',function(req,res){
