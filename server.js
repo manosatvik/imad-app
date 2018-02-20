@@ -18,11 +18,11 @@ var articles = {
     content:`<p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>
         <p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>
         <p>This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one This is article number one</p>`},
- articleTwo : {title:"Article-two|manosatvik",
+ 'article-two' : {title:"Article-two|manosatvik",
     heading:"Artilce-two",
     date:"25th feb, 2018",
     content:`<p>This is article number two</p>`},
- articleThree : {title:"Article-three|manosatvik",
+ 'article-three' : {title:"Article-three|manosatvik",
     heading:"Artilce-three",
     date:"29th feb, 2018",
     content:`<p>This is article three two</p>`}
