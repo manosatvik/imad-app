@@ -61,6 +61,7 @@ return template;
 
 
 app.get('/:articleName',function(req,res){
+    articleName = req.params.articleName;
    res.send(create_template(articles[articleName]));
 });
 
