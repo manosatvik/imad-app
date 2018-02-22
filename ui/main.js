@@ -5,7 +5,7 @@ button.onclick = function(){
     //make a new request
     var request = new XMLHttpRequest();
     //if request state changes
-    request.onreadystatechange = func(){
+    request.onreadystatechange = function(){
         if(request.readystate === XMLHttpRequest.DONE)
         {
             if(request.status == 200)
@@ -16,7 +16,7 @@ button.onclick = function(){
             }
         }
     };
-    request.open('GET','http://manosatvik.imad.hasura-app.io/counter',true);
+    request .open('GET','http://manosatvik.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
