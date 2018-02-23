@@ -31,5 +31,5 @@ btn.onclick = function(){
         list += '<li>'+names[i]+'</li>';
     }
     var namelist = document.getElementById('ul');
-    nameslist.innerHTML = list;
+    namlist.innerHTML = list;
 };
