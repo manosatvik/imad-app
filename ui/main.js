@@ -43,7 +43,7 @@ btn.onclick = function(){
     
     var nametext = document.getElementById("name");
     var uname = nametext.value;
-    request.open('GET','http://manosatvik.imad.hasura.app.io/submit-name?name='+name,true);
+    request.open('GET','http://manosatvik.imad.hasura.app.io/submit-name?name='+uname,true);
     request.send(null);
    
 };
