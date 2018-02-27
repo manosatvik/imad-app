@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').pool;
+var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
@@ -73,7 +73,7 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-var pool = new pool(config);
+var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     pool.query('select * from usertable'),function(err,result){
         if(err){
