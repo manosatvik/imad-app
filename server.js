@@ -13,6 +13,8 @@ var config={
     password:process.env.DB_PASSWORD
 };
 
+var pool = new Pool(config);
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -73,7 +75,7 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-var pool = new Pool(config);
+
 app.get('/test-db',function(req,res){
     pool.query('SELECT * FROM usertable'),function(err,result){
         if(err){
@@ -81,7 +83,7 @@ app.get('/test-db',function(req,res){
         }
         else
         {
-            res.send(JSON.stringify(result));
+            res.send(JSON.stringify(result.rows));
         }
     }
 });
