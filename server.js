@@ -10,7 +10,7 @@ var config={
     database:'manosatvik',
     host:'db-imad.hasura-app.io',
     port:'5432',
-    password:process.env.DB_PASSWORD
+    password:'db-manosatvik-60240'
 };
 
 app.get('/', function (req, res) {
