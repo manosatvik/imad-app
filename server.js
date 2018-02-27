@@ -8,10 +8,10 @@ app.use(morgan('combined'));
 var config={
     user:'manosatvik',
     database:'manosatvik',
-    host:'db-imad.hasura-app.io'
-    port:'5432'
+    host:'db-imad.hasura-app.io',
+    port:'5432',
     password:process.env.DB_PASSWORD
-}
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
